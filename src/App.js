@@ -1,11 +1,12 @@
 import './App.css'
 import { Outlet } from 'react-router-dom'
-import Primary from './components/Navigation/Primary/Primary'
+import { Primary as NavigationHorizontal, Secondary as NavigationVertical } from './components/'
 
 function App() {
   return (
     <div className="container">
-      <Primary />
+      <NavigationHorizontal />
+      <NavigationVertical />
       <main>
           <Outlet />
       </main>
