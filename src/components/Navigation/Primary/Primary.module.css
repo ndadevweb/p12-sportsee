@@ -1,0 +1,29 @@
+.primary {
+  display: flex;
+  align-items: center;
+  height: 91px;
+  padding-left: 30px;
+  background: var(--color-black-custom-1);
+}
+
+.primary ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 150px;
+  margin-right: 90px;
+  list-style: none;
+}
+
+.primary li {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.primary a {
+  color: var(--color-white);
+  text-decoration: none;
+}
