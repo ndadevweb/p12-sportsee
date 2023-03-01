@@ -1,8 +1,9 @@
 .secondary {
-  position: absolute;
+  position: fixed;
   top: 91px;
-  left: 0;
   bottom: 0;
+
+
   width: 117px;
   background: var(--color-black-custom-1);
 }
@@ -44,6 +45,6 @@
 @media screen and (max-height: 850px) {
   .secondary ul {
     justify-content: flex-start;
-    margin-top: 50px;
+    padding-top: 50px;
   }
 }

@@ -7,8 +7,8 @@ function App() {
     <div className="container">
       <NavigationHorizontal />
       <NavigationVertical />
-      <main>
-          <Outlet />
+      <main className="grid-item-3">
+        <Outlet />
       </main>
     </div>
   )

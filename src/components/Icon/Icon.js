@@ -17,6 +17,10 @@ export default function Icon({ name }) {
     case 'swim':
     case 'bike':
     case 'fitness':
+    case 'calories':
+    case 'protein':
+    case 'carbs':
+    case 'fat':
       return <img src={ path } alt={ name } />
 
     default:

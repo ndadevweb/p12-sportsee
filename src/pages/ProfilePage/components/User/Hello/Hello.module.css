@@ -1,0 +1,16 @@
+.hello,
+.firstname {
+  font-family: var(--font-default);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.hello {
+  margin: 20px 0;
+  color: var(--color-black);
+}
+
+.firstname {
+  color: var(--color-red-custom-1);
+}

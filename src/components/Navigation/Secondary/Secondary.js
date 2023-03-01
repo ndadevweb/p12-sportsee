@@ -9,7 +9,7 @@ import styles from './Secondary.module.css'
  */
 export default function Secondary() {
   return (
-    <div className={ styles.secondary }>
+    <div className={ `grid-item-2 ${ styles.secondary }` }>
       <nav>
         <ul>
           <li><NavLink to="/"><Icon name="yoga" /></NavLink></li>

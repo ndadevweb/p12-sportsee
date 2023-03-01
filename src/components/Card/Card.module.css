@@ -1,0 +1,36 @@
+.card {
+  border-radius: 5px;
+}
+
+.cardDefault {
+  background: var(--color-gray-custom-1);
+}
+
+.cardRed {
+  background: var(--color-red-custom-2);
+}
+
+.cardDark {
+  background: var(--color-gray-custom-2);
+}
+
+.cardSmall {
+  width: 258px;
+  height: 124px;
+}
+
+.cardMedium {
+  width: 258px;
+  height: 263px;
+}
+
+.cardLarge {
+  width: 835px;
+  height: 320px;
+}
+
+@media screen and (max-width: 1299px) {
+  .cardSmall {
+    height: 92px;
+  }
+}
