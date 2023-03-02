@@ -2,7 +2,24 @@ import PropTypes from 'prop-types'
 import { Card, Icon } from '../../../../../components'
 import styles from './Details.module.css'
 
+/**
+ * Show informations burned
+ *
+ * @param {Object} param
+ * @param {String} param.calorieCount
+ * @param {String} param.proteinCount
+ * @param {String} param.carbohydrateCount
+ * @param {String} param.lipidCount
+ * @returns {React.ReactComponentElement}
+ */
 export default function Details({ keyData }) {
+  const {
+    calorieCount,
+    proteinCount,
+    carbohydrateCount,
+    lipidCount
+  } = keyData
+
   return (
     <>
       <Card type="cardSmall" color="cardDefault">
@@ -10,7 +27,7 @@ export default function Details({ keyData }) {
           <Icon name="calories" />
 
           <p className={ styles.informations }>
-            <span className={ styles.values }>1,930</span>
+            <span className={ styles.values }>{ calorieCount }</span>
             <span className={ styles.type }>Calories</span>
           </p>
         </div>
@@ -21,7 +38,7 @@ export default function Details({ keyData }) {
           <Icon name="protein" />
 
           <p className={ styles.informations }>
-            <span className={ styles.values }>155g</span>
+            <span className={ styles.values }>{ proteinCount }</span>
             <span className={ styles.type }>Proteines</span>
           </p>
         </div>
@@ -32,7 +49,7 @@ export default function Details({ keyData }) {
           <Icon name="carbs" />
 
           <p className={ styles.informations }>
-            <span className={ styles.values }>290g</span>
+            <span className={ styles.values }>{ carbohydrateCount }</span>
             <span className={ styles.type }>Glucides</span>
           </p>
         </div>
@@ -43,7 +60,7 @@ export default function Details({ keyData }) {
           <Icon name="fat" />
 
           <p className={ styles.informations }>
-            <span className={ styles.values }>50g</span>
+            <span className={ styles.values }>{ lipidCount }</span>
             <span className={ styles.type }>Lipides</span>
           </p>
         </div>
@@ -53,5 +70,10 @@ export default function Details({ keyData }) {
 }
 
 Details.propTypes = {
-
+  keyData: PropTypes.shape({
+    calorieCount: PropTypes.string.isRequired,
+    proteinCount: PropTypes.string.isRequired,
+    carbohydrateCount: PropTypes.string.isRequired,
+    lipidCount: PropTypes.string.isRequired,
+  }).isRequired
 }

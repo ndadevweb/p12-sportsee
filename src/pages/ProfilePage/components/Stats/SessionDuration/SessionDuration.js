@@ -8,7 +8,7 @@ import { Card } from '../../../../../components'
  * @param {Array<Object>} param.sessions
  * @returns {React.ReactComponentElement}
  */
-export default function SessionDuration({ session }) {
+export default function SessionDuration({ userAverageSessions }) {
   return (
     <Card type="cardMedium" color="cardRed">
       {/* Graphique duree des sessions */}
@@ -17,7 +17,7 @@ export default function SessionDuration({ session }) {
 }
 
 SessionDuration.propTypes = {
-  sessions: PropTypes.arrayOf(
+  userAverageSessions: PropTypes.arrayOf(
     PropTypes.shape({
       day: PropTypes.number.isRequired,
       sessionLength: PropTypes.number.isRequired

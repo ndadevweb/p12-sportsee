@@ -8,7 +8,7 @@ import { Card } from '../../../../../components'
  * @param {Array<Object>} param.sessions
  * @returns {React.ReactComponentElement}
  */
-export default function DailyActivity({ sessions }) {
+export default function DailyActivity({ userActivity }) {
   return (
     <Card type="cardLarge" color="cardDefault">
       {/* Graphique bar */}
@@ -17,11 +17,11 @@ export default function DailyActivity({ sessions }) {
 }
 
 DailyActivity.propTypes = {
-  sessions: PropTypes.arrayOf(
+  userActivity: PropTypes.arrayOf(
     PropTypes.shape({
       day: PropTypes.string.isRequired,
       kilogram: PropTypes.number.isRequired,
       calories: PropTypes.number.isRequired
     }).isRequired
-  )
+  ).isRequired
 }
