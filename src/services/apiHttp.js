@@ -9,7 +9,7 @@ export default class ApiHttp {
    */
   constructor(apiUrl) {
     this.axiosInstance = axios.create({
-      baseURL: apiUrl
+      baseURL: apiUrl+'/user'
     })
   }
 
@@ -21,7 +21,7 @@ export default class ApiHttp {
    */
   async getUser(id) {
     const userId = parseInt(id, 10)
-    const result = await this.axiosInstance.get(`/user/${ userId }`)
+    const result = await this.axiosInstance.get(`/${ userId }`)
       .then(response => response)
       .catch(error => console.log(error.message))
 
@@ -46,7 +46,7 @@ export default class ApiHttp {
    */
   async getUserActivity(id) {
     const userId = parseInt(id, 10)
-    const result = await this.axiosInstance.get(`/user/${ userId }/activity`)
+    const result = await this.axiosInstance.get(`/${ userId }/activity`)
       .then(response => response)
       .catch(error => console.log(error.message))
 
@@ -71,7 +71,7 @@ export default class ApiHttp {
    */
   async getUserAverageSessions(id) {
     const userId = parseInt(id, 10)
-    const result = await this.axiosInstance.get(`/user/${ userId }/average-sessions`)
+    const result = await this.axiosInstance.get(`/${ userId }/average-sessions`)
       .then(response => response)
       .catch(error => [])
 
@@ -88,7 +88,28 @@ export default class ApiHttp {
     return averageSessionsModel
   }
 
+  /**
+   * Return a promise with a Performance model
+   *
+   * @param {Number} id
+   * @returns {Promise}
+   */
   async getUserPerformance(id) {
-    return new Performance({})
+    const userId = parseInt(id, 10)
+    const result = await this.axiosInstance.get(`/${ userId }/performance`)
+      .then(response => response)
+      .catch(error => [])
+
+    let performanceModel = null
+
+    if(result.status === 200) {
+      const { data } = result.data
+
+      performanceModel = new Performance(data)
+    } else {
+      performanceModel = new Performance({})
+    }
+
+    return performanceModel
   }
 }
