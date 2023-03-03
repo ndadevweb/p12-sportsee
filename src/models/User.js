@@ -8,7 +8,7 @@ export default class User {
    * @param {Object} data
    */
   constructor(data) {
-    this.data = data
+    this.userData = data
   }
 
   /**
@@ -17,7 +17,7 @@ export default class User {
    * @returns {Number}
    */
   getId() {
-    return parseInt(this.data?.id, 10) || 0
+    return parseInt(this?.userData?.id, 10) || 0
   }
 
   /**
@@ -26,7 +26,7 @@ export default class User {
    * @returns {String}
    */
   getFirstname() {
-    return this.data?.userInfos?.firstName || 'unknown'
+    return this?.userData?.userInfos?.firstName || 'unknown'
   }
 
   /**
@@ -35,7 +35,7 @@ export default class User {
    * @returns {String}
    */
   getLastname() {
-    return this.data?.userInfos?.lastName || 'unknown'
+    return this?.userData?.userInfos?.lastName || 'unknown'
   }
 
   /**
@@ -44,7 +44,7 @@ export default class User {
    * @returns {Number}
    */
   getAge() {
-    return parseInt(this.data?.userInfos?.age, 10) || 0
+    return parseInt(this?.userData?.userInfos?.age, 10) || 0
   }
 
   /**
@@ -53,7 +53,7 @@ export default class User {
    * @returns {Number}
    */
   getTodayScore() {
-    const score = this.data?.todayScore || this.data?.score || 0
+    const score = this?.userData?.todayScore || this?.userData?.score || 0
     const scoreToPercent = score * 100
 
     return scoreToPercent
@@ -65,7 +65,7 @@ export default class User {
    * @returns {Number}
    */
   getCalories() {
-    return parseInt(this.data?.keyData?.calorieCount, 10) || 0
+    return parseInt(this?.userData?.keyData?.calorieCount, 10) || 0
   }
 
   /**
@@ -74,7 +74,7 @@ export default class User {
    * @returns {Number}
    */
   getProtein() {
-    return parseInt(this.data?.keyData?.proteinCount, 10) || 0
+    return parseInt(this?.userData?.keyData?.proteinCount, 10) || 0
   }
 
   /**
@@ -83,7 +83,7 @@ export default class User {
    * @returns {Number}
    */
   getCarbohydrate() {
-    return parseInt(this.data?.keyData?.carbohydrateCount, 10) || 0
+    return parseInt(this?.userData?.keyData?.carbohydrateCount, 10) || 0
   }
 
   /**
@@ -92,7 +92,7 @@ export default class User {
    * @returns {Number}
    */
   getLipid() {
-    return parseInt(this.data?.keyData?.lipidCount, 10) || 0
+    return parseInt(this?.userData?.keyData?.lipidCount, 10) || 0
   }
 
   /**

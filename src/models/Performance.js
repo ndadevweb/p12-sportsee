@@ -8,8 +8,7 @@ export default class Performance {
    * @param {Object} data
    */
   constructor(data) {
-    this.kindData = data
-    this.kinds = []
+    this.performanceData = data
   }
 
   /**
@@ -18,6 +17,19 @@ export default class Performance {
    * @returns {Number}
    */
   getUserId() {
-    return parseInt(this?.kindData?.userId, 10) || 0
+    return parseInt(this?.performanceData?.userId, 10) || 0
+  }
+
+  /**
+   * Get key data with labels ( kind )
+   * and associated values ( data )
+   *
+   * @returns {Object}
+   */
+  getKeyData() {
+    return {
+      kind: this?.performanceData.kind,
+      data: this?.performanceData.data
+    }
   }
 }

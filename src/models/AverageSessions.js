@@ -8,7 +8,7 @@ export default class AverageSessions {
    * @param {Object} data
    */
   constructor(data) {
-    this.data = data
+    this.averageSessionsData = data
   }
 
   /**
@@ -17,7 +17,7 @@ export default class AverageSessions {
    * @returns {Number}
    */
   getUserId() {
-    return parseInt(this?.data?.userId, 10) || 0
+    return parseInt(this?.averageSessionsData?.userId, 10) || 0
   }
 
   /**
@@ -27,7 +27,7 @@ export default class AverageSessions {
    * @returns {Array<Object>}
    */
   getSessions() {
-    const sessions = this?.data
+    const sessions = this?.averageSessionsData
       ?.sessions
       ?.map((session, index) => ({
         day: parseInt(session?.day, 10) || index + 1,

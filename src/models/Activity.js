@@ -8,7 +8,7 @@ export default class Activity {
    * @param {Object} data
    */
   constructor(data) {
-    this.data = data
+    this.activityData = data
   }
 
   /**
@@ -17,7 +17,7 @@ export default class Activity {
    * @returns {Number}
    */
   getUserId() {
-    return parseInt(this?.data?.userId, 10) || 0
+    return parseInt(this?.activityData?.userId, 10) || 0
   }
 
   /**
@@ -28,7 +28,7 @@ export default class Activity {
    */
   getSessions() {
     const sessions = this
-      ?.data
+      ?.activityData
       ?.sessions
       ?.map(session => ({
         day: session?.day || '0000-00-00',
