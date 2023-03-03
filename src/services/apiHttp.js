@@ -23,7 +23,7 @@ export default class ApiHttp {
     const userId = parseInt(id, 10)
     const result = await this.axiosInstance.get(`/user/${ userId }`)
       .then(response => response)
-      .catch(error => [])
+      .catch(error => console.log(error.message))
 
     let userModel = null
 
@@ -39,7 +39,22 @@ export default class ApiHttp {
   }
 
   async getUserActivity(id) {
-    return new Activity({})
+    const userId = parseInt(id, 10)
+    const result = await this.axiosInstance.get(`/user/${ userId }/activity`)
+      .then(response => response)
+      .catch(error => console.log(error.message))
+
+    let activityModel = null
+
+    if(result.status === 200) {
+      const { data } = result.data
+
+      activityModel = new Activity(data)
+    } else {
+      activityModel = new Activity({})
+    }
+
+    return activityModel
   }
 
   async getUserAverageSessions(id) {
