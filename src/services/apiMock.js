@@ -12,7 +12,7 @@ export default class ApiMock {
    * @returns {User}
    */
   getUser(id) {
-    const userId = this.idCast(id)
+    const userId = parseInt(id, 10)
     const { data } = usersMock
     const user = data
       .filter(user => user.id === userId)
@@ -29,7 +29,7 @@ export default class ApiMock {
    * @returns {Activity}
    */
   getUserActivity(id) {
-    const userId = this.idCast(id)
+    const userId = parseInt(id, 10)
     const { data } = usersActivityMock
     const activity = data
       .filter(activity => activity.userId === userId)
@@ -46,7 +46,7 @@ export default class ApiMock {
    * @returns {Performance}
    */
   getUserPerformance(id) {
-    const userId = this.idCast(id)
+    const userId = parseInt(id, 10)
     const { data } = usersPerformanceMock
     const performance = data
       .filter(performance => performance.userId === userId)
@@ -63,17 +63,13 @@ export default class ApiMock {
    * @returns {AverageSessions}
    */
   getUserAverageSessions(id) {
-    const userId = this.idCast(id)
+    const userId = parseInt(id, 10)
     const { data } = usersAverageSessionsMock
-    const activity = data
+    const averageSessions = data
       .filter(averageSessions => averageSessions.userId === userId)
       .at(0)
-    const averageSessionsModel = new AverageSessions(activity)
+    const averageSessionsModel = new AverageSessions(averageSessions)
 
     return averageSessionsModel
-  }
-
-  idCast(id) {
-    return parseInt(id, 10)
   }
 }

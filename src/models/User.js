@@ -44,7 +44,7 @@ export default class User {
    * @returns {Number}
    */
   getAge() {
-    return this.parseInt(this.data?.userInfos?.age, 10) || 0
+    return parseInt(this.data?.userInfos?.age, 10) || 0
   }
 
   /**
