@@ -30,8 +30,8 @@ export default class Activity {
     const sessions = this
       ?.activityData
       ?.sessions
-      ?.map(session => ({
-        day: session?.day || '0000-00-00',
+      ?.map((session, index) => ({
+        day: new Date(session?.day || '0000-00-00').getDate(),
         kilogram: parseInt(session?.kilogram, 10) || 0,
         calories: parseInt(session?.calories, 10) || 0
       })) || []

@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 0 28px 0 32px;
+}
+
+.container h4 {
+  margin: 0;
+  color: var(--color-gray-custom-4);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.container ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+}
+
+.container li {
+  position: relative;
+  color: var(--color-gray-custom-3);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.container ul li::before {
+  content: "\2022";
+  position: absolute;
+  left: -20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.container ul li:first-child::before {
+  color: var(--color-gray-custom-2);
+}
+
+.container li:first-child {
+  margin-right: 48px;
+}
+
+.container ul li:last-child::before {
+  color: var(--color-red-custom-3);
+}

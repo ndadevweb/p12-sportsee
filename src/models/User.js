@@ -65,7 +65,12 @@ export default class User {
    * @returns {Number}
    */
   getCalories() {
-    return parseInt(this?.userData?.keyData?.calorieCount, 10) || 0
+    const value = parseInt(this?.userData?.keyData?.calorieCount, 10) || 0
+    const formattedValue = new Intl.NumberFormat('en-IN', {
+      maximumSignificantDigits: 3
+    }).format(value)
+
+    return formattedValue
   }
 
   /**

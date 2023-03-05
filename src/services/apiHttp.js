@@ -23,17 +23,12 @@ export default class ApiHttp {
     const userId = parseInt(id, 10)
     const result = await this.axiosInstance.get(`/${ userId }`)
       .then(response => response)
-      .catch(error => console.log(error.message))
+      .catch(error => console.warn(error.message))
 
-    let userModel = null
-
-    if(result.status === 200) {
-      const { data } = result.data
-
-      userModel = new User(data)
-    } else {
-      userModel = new User({})
-    }
+    const data = result?.status === 200
+      ? result?.data?.data
+      : {}
+    const userModel = new User(data)
 
     return userModel
   }
@@ -48,17 +43,12 @@ export default class ApiHttp {
     const userId = parseInt(id, 10)
     const result = await this.axiosInstance.get(`/${ userId }/activity`)
       .then(response => response)
-      .catch(error => console.log(error.message))
+      .catch(error => console.warn(error.message))
 
-    let activityModel = null
-
-    if(result.status === 200) {
-      const { data } = result.data
-
-      activityModel = new Activity(data)
-    } else {
-      activityModel = new Activity({})
-    }
+    const data = result?.status === 200
+      ? result?.data?.data
+      : {}
+    const activityModel = new Activity(data)
 
     return activityModel
   }
@@ -73,17 +63,12 @@ export default class ApiHttp {
     const userId = parseInt(id, 10)
     const result = await this.axiosInstance.get(`/${ userId }/average-sessions`)
       .then(response => response)
-      .catch(error => [])
+      .catch(error => console.warn(error.message))
 
-    let averageSessionsModel = null
-
-    if(result.status === 200) {
-      const { data } = result.data
-
-      averageSessionsModel = new AverageSessions(data)
-    } else {
-      averageSessionsModel = new AverageSessions({})
-    }
+    const data = result?.status === 200
+      ? result?.data?.data
+      : {}
+    const averageSessionsModel = new AverageSessions(data)
 
     return averageSessionsModel
   }
@@ -98,17 +83,12 @@ export default class ApiHttp {
     const userId = parseInt(id, 10)
     const result = await this.axiosInstance.get(`/${ userId }/performance`)
       .then(response => response)
-      .catch(error => [])
+      .catch(error => console.warn(error.message))
 
-    let performanceModel = null
-
-    if(result.status === 200) {
-      const { data } = result.data
-
-      performanceModel = new Performance(data)
-    } else {
-      performanceModel = new Performance({})
-    }
+    const data = result?.status === 200
+      ? result?.data?.data
+      : {}
+    const performanceModel = new Performance(data)
 
     return performanceModel
   }
