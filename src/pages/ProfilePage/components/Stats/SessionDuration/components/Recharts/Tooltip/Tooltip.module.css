@@ -1,0 +1,20 @@
+.wrapper {
+  background: rgba(0, 0, 0, .1);
+  height: 263px;
+  margin-top: -70px;
+  border: none;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 25px;
+  background: #FFF;
+  color: #000;
+  font-size: 12px;
+  margin-left: 10px;
+  position: absolute;
+  top: 35px;
+}

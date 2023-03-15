@@ -12,11 +12,10 @@ import classes from './Tooltip.module.css'
  * https://recharts.org/en-US/api/Tooltip
  *
  * @param {Object} param
- * @param {boolean} param.active
  * @param {Array<Object>} param.payload
  * @returns {React.ReactComponentElement}
  */
-export default function Tooltip({ active, payload }) {
+export default function Tooltip({ payload }) {
   const units = {
     kilogram: 'kg',
     calories: 'Kcal'
@@ -30,11 +29,9 @@ export default function Tooltip({ active, payload }) {
 }
 
 Tooltip.defaultProps = {
-  active: false,
   payload: []
 }
 
 Tooltip.propTypes = {
-  active: PropTypes.bool.isRequired,
   payload: PropTypes.array.isRequired
 }

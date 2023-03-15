@@ -19,6 +19,7 @@ export default function DailyActivity({ userActivity }) {
           data={ userActivity }
           barGap={ 8 }
           barSize={ 7 }
+          margin={{ left: 40 }}
         >
           <CartesianGrid strokeDasharray="3 2" strokeOpacity={ 0.5 } vertical={ false } />
           <XAxis
@@ -41,7 +42,7 @@ export default function DailyActivity({ userActivity }) {
             yAxisId="calories"
             domain={[0, 'dataMax + 20']}
           />
-          <Tooltip content={ <TooltipCustom /> } wrapperStyle={{ outline: 'none'}}/>
+          <Tooltip content={ <TooltipCustom /> } wrapperStyle={{ outline: 'none'}} />
           <Legend
             verticalAlign={ 'top' }
             align={ 'right' }
