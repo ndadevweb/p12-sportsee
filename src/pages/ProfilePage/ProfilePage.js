@@ -34,7 +34,7 @@ export default function ProfilePage() {
           </div>
 
           <div className={ styles.typeActivityContainer }>
-            <TypeActivity />
+            <TypeActivity { ...dataFromAPI.userPerformance.getKeyData() } />
           </div>
 
           <div className={ styles.scoreContainer }>
