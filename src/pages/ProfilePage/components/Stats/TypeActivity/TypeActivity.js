@@ -2,6 +2,15 @@ import PropTypes from 'prop-types'
 import { Card } from '../../../../../components'
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer } from 'recharts'
 
+/**
+ * Show user's performances
+ *
+ * @param {Object} param
+ * @param {Object} param.data
+ * @param {Object} param.kind
+ *
+ * @returns {React.ReactComponentElement}
+ */
 export default function TypeActivity({ data, kind }) {
 
   const performances = data.map(performance => performance).reverse()

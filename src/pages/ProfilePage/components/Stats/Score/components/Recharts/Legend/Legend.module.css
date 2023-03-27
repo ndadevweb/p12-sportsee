@@ -1,0 +1,7 @@
+.title {
+  text-indent: 30px;
+  color: var(--color-gray-custom-4);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+}

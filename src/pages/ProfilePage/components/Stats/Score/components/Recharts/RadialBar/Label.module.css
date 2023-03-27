@@ -1,0 +1,43 @@
+.containerCircle {
+  --size: 164px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+  background: var(--color-white);
+  opacity: 0;
+  animation: fadeIn 500ms forwards;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  text-align: center;
+  line-height: 26px;
+}
+
+.value {
+  color: var(--color-gray-custom-2);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.text {
+  color: var(--color-gray-custom-3);
+}
+
+@keyframes fadeIn {
+  0% {
+    opaciy: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

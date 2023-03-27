@@ -12,7 +12,6 @@ import classes from './Legend.module.css'
  * https://recharts.org/en-US/api/Legend
  *
  * @param {Object} param
- * @param {boolean} param.active
  * @param {Array<Object>} param.payload
  * @returns {React.ReactComponentElement}
  */
