@@ -43,7 +43,7 @@ body {
   display: grid;
   grid-template-rows: 91px 1fr;
   grid-template-columns: 117px 1fr;
-
+  height: 100%;
 }
 
 .grid-item-1 {
