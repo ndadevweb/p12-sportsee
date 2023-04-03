@@ -3,7 +3,7 @@ import useFetchApi from '../../hooks/useFetchApi'
 import {
   Hello, MessageInformation,
   DailyActivity, SessionDuration, TypeActivity, Score, Details
-} from './components'
+} from '../../components'
 import styles from './ProfilePage.module.css'
 
 export default function ProfilePage() {

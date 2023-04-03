@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Card, Icon } from '../../../../../components'
+import { Card, Icon } from '../../index'
 import styles from './Details.module.css'
 
 /**

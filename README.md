@@ -26,7 +26,7 @@ Install the dependencies `npm install`
 
 Edit the `config.js` file inside *src* folder to choose environment between `dev` and `prod` key
 
-**prod** to use backend
+**prod** to use backend *(default value)*
 
 **dev** to use mock data
 
@@ -37,4 +37,5 @@ During application launch, if you chose to use `prod` environment, run the app w
 To acces user data on their profile page follow links below
 
 http://localhost:3001/profile/12
+
 http://localhost:3001/profile/18

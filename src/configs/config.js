@@ -1,7 +1,7 @@
 /**
  * prod | dev
  */
-const ENV = 'prod'
+const ENV = 'dev'
 
 const API_URL = 'http://localhost:3000'
 

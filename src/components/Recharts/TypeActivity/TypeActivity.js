@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Card } from '../../../../../components'
+import { Card } from '../../index'
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer } from 'recharts'
 
 /**

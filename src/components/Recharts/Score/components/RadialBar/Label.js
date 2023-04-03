@@ -1,4 +1,4 @@
-import scoreValidator from '../../../../../../../../types'
+import scoreValidator from '../../../../../types'
 import classes from './Label.module.css'
 
 /**

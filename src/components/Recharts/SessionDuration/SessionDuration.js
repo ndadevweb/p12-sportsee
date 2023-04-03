@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Card } from '../../../../../components'
+import { Card } from '../../index'
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { ActiveDotCustom, TooltipCustom, LegendCustom } from './components'
 

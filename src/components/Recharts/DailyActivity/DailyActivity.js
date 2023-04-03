@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Card } from '../../../../../components'
+import { Card } from '../../index'
 import { TooltipCustom, LegendCustom } from './components'
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, ResponsiveContainer } from 'recharts'
 /**

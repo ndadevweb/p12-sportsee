@@ -1,7 +1,7 @@
-import scoreValidator from '../../../../../types'
+import scoreValidator from '../../../types'
 import { LegendCustom, RadialBarLabelCustom } from './components/'
 import { RadialBarChart, RadialBar, Legend, ResponsiveContainer, PolarAngleAxis } from 'recharts'
-import { Card } from '../../../../../components'
+import { Card } from '../../index'
 
 /**
  *
