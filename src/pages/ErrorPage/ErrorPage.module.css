@@ -1,0 +1,30 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.statusCode {
+  margin: 0;
+  font-weight: 700;
+  font-size: 288px;
+}
+
+.statusCode, .statusMessage, .link {
+  text-align: center;
+  color: var(--color-red-custom-3);
+}
+
+.statusMessage {
+  line-height: 142%;
+  font-size: 36px;
+}
+
+.link {
+  display: block;
+  /* margin-top: 180px; */
+  line-height: 25px;
+  font-size: 18px;
+  text-decoration: underline;
+}

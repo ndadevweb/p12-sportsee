@@ -15,9 +15,9 @@ import PropTypes from 'prop-types'
  * @param {Number} param.cy
  * @param {Number} param.index
  * @param {Array<Number>} param.hideIndex
- * @returns {React.ComponentElement}
+ * @returns <ActiveDot />
  */
-export default function activeDot({ cx, cy, index, hideIndex }) {
+export default function ActiveDot({ cx, cy, index, hideIndex }) {
 
   return (
     <>
@@ -36,14 +36,14 @@ export default function activeDot({ cx, cy, index, hideIndex }) {
   )
 }
 
-activeDot.defaultProps = {
+ActiveDot.defaultProps = {
   cx: 0,
   cy: 0,
   index: 0,
   hideIndex: []
 }
 
-activeDot.propTypes = {
+ActiveDot.propTypes = {
   cx: PropTypes.number.isRequired,
   cy: PropTypes.number.isRequired,
   index: PropTypes.number.isRequired,

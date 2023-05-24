@@ -5,7 +5,7 @@ import classes from './Label.module.css'
  *
  * @param {Object} props
  * @param {Number} props.score
- * @returns {ReactComponentElement}
+ * @returns <Label />
  */
 export default function Label({ value }) {
 

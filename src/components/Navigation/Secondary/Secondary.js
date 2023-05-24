@@ -5,7 +5,7 @@ import styles from './Secondary.module.css'
 /**
  * Vertical navigation
  *
- * @returns {React.ReactComponent}
+ * @returns <Secondary />
  */
 export default function Secondary() {
   return (

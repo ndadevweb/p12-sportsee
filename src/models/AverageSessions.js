@@ -36,4 +36,13 @@ export default class AverageSessions {
 
       return sessions
   }
+
+  /**
+   * Check if averageSessionData exist
+   *
+   * @returns {Boolean}
+   */
+  hasData() {
+    return Object.keys(this.averageSessionsData).length !== 0
+  }
 }

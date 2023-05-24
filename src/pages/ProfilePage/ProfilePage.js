@@ -1,47 +1,58 @@
 import { useParams } from 'react-router-dom'
 import useFetchApi from '../../hooks/useFetchApi'
 import {
-  Hello, MessageInformation,
+  Hello, MessageInformation, Alert, Loading,
   DailyActivity, SessionDuration, TypeActivity, Score, Details
 } from '../../components'
-import styles from './ProfilePage.module.css'
+import classes from './ProfilePage.module.css'
 
+/**
+ * User Profil page
+ *
+ * @returns <ProfilePage />
+ */
 export default function ProfilePage() {
   const { id } = useParams()
-  const [dataFromAPI, isLoading] = useFetchApi(id)
+  const [dataFromAPI, isLoading, errorData] = useFetchApi(id)
 
   return (
-    <div className={ styles.container }>
-      { isLoading === true && 'Chargement' }
+    <div className={ classes.container }>
+      <Loading isActive={ isLoading } />
+      {
+        errorData !== null
+          ? (
+            <div className={ classes.alertContainer }>
+              <Alert message="Impossible de récupérer les données associées à votre compte" />
+            </div>
+          )
+          : isLoading === false ? (
+            <>
+              <div className={ classes.helloContainer }>
+                <Hello firstname={ dataFromAPI.user.getFirstname() } />
+                <MessageInformation type="congratulation" />
+              </div>
 
-      { isLoading === false && (
-        <>
-          <div className={ styles.helloContainer }>
-            <Hello firstname={ dataFromAPI.user.getFirstname() } />
-            <MessageInformation type="congratulation" />
-          </div>
+              <div className={ classes.detailsContainer }>
+                <Details keyData={ dataFromAPI.user.getKeyData() } />
+              </div>
 
-          <div className={ styles.detailsContainer }>
-            <Details keyData={ dataFromAPI.user.getKeyData() } />
-          </div>
+              <div className={ classes.dailyActivityContainer }>
+                <DailyActivity userActivity={ dataFromAPI.userActivity.getSessions() } />
+              </div>
 
-          <div className={ styles.dailyActivityContainer }>
-            <DailyActivity userActivity={ dataFromAPI.userActivity.getSessions() } />
-          </div>
+              <div className={ classes.sessionsDurationContainer }>
+                <SessionDuration userAverageSessions={ dataFromAPI.userAverageSessions.getSessions() } />
+              </div>
 
-          <div className={ styles.sessionsDurationContainer }>
-            <SessionDuration userAverageSessions={ dataFromAPI.userAverageSessions.getSessions() } />
-          </div>
+              <div className={ classes.typeActivityContainer }>
+                <TypeActivity { ...dataFromAPI.userPerformance.getKeyData() } />
+              </div>
 
-          <div className={ styles.typeActivityContainer }>
-            <TypeActivity { ...dataFromAPI.userPerformance.getKeyData() } />
-          </div>
-
-          <div className={ styles.scoreContainer }>
-            <Score userScore={ dataFromAPI.user.getTodayScore() } />
-          </div>
-        </>
-        )
+              <div className={ classes.scoreContainer }>
+                <Score userScore={ dataFromAPI.user.getTodayScore() } />
+              </div>
+            </>
+          ) : null
       }
     </div>
   )

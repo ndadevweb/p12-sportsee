@@ -32,4 +32,13 @@ export default class Performance {
       data: this?.performanceData.data
     }
   }
+
+  /**
+   * Check if performanceData exist
+   *
+   * @returns {Boolean}
+   */
+  hasData() {
+    return Object.keys(this.performanceData).length !== 0
+  }
 }

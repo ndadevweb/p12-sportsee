@@ -13,7 +13,7 @@ import classes from './Legend.module.css'
  *
  * @param {Object} param
  * @param {Array<Object>} param.payload
- * @returns {React.ReactComponentElement}
+ * @returns <Legend />
  */
 export default function Legend({ payload }) {
   const labels = {

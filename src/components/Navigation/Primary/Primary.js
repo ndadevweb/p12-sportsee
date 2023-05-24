@@ -5,7 +5,7 @@ import styles from './Primary.module.css'
 /**
  * Navigation horizontal
  *
- * @returns {React.ReactComponent}
+ * @returns <Primary />
  */
 export default function Primary() {
   return (

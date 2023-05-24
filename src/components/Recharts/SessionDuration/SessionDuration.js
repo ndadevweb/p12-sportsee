@@ -8,7 +8,7 @@ import { ActiveDotCustom, TooltipCustom, LegendCustom } from './components'
  *
  * @param {Object} param
  * @param {Array<Object>} param.userAverageSessions
- * @returns {React.ReactComponentElement}
+ * @returns <SessionDuration />
  */
 export default function SessionDuration({ userAverageSessions }) {
 

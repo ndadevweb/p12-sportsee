@@ -8,7 +8,7 @@ import styles from './Card.module.css'
  * @param {String} param.type (cardSmall | cardMedium | cardLarge)
  * @param {String} param.color (cardDefault | cardRed | cardDark)
  * @param {React.ReactNode} children
- * @returns {React.ReactComponentElement}
+ * @returns <Card />
  */
 export default function Card({ type, color, children }) {
   const classesCard = [type, color].map(classArgument => styles[classArgument]).join(' ')

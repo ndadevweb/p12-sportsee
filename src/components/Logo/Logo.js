@@ -3,7 +3,7 @@ import styles from './Logo.module.css'
 /**
  * Logo of the web application
  *
- * @returns {React.ReactComponent}
+ * @returns <Logo />
  */
 export default function Logo() {
   return (

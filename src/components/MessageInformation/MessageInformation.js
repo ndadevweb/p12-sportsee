@@ -8,7 +8,7 @@ import styles from './MessageInformation.module.css'
  * @param {String} param.type
  * @throws {Error} Type does not exist
  *
- * @returns {React.ReactComponentElement}
+ * @returns <MessageInformation />
  */
 export default function MessageInformation({ type }) {
   switch(type) {

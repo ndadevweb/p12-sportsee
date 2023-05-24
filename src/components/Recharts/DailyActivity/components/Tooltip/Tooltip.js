@@ -13,7 +13,7 @@ import classes from './Tooltip.module.css'
  *
  * @param {Object} param
  * @param {Array<Object>} param.payload
- * @returns {React.ReactComponentElement}
+ * @returns <Tooltip />
  */
 export default function Tooltip({ payload }) {
   const units = {

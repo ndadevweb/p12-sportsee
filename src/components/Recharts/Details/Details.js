@@ -10,7 +10,7 @@ import styles from './Details.module.css'
  * @param {String} param.proteinCount
  * @param {String} param.carbohydrateCount
  * @param {String} param.lipidCount
- * @returns {React.ReactComponentElement}
+ * @returns <Details />
  */
 export default function Details({ keyData }) {
   const {

@@ -9,7 +9,7 @@ import { PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer } fro
  * @param {Object} param.data
  * @param {Object} param.kind
  *
- * @returns {React.ReactComponentElement}
+ * @returns <TypeActivity />
  */
 export default function TypeActivity({ data, kind }) {
 

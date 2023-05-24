@@ -1,4 +1,7 @@
 /**
+ * prod : data from api http
+ * dev  : data from mock
+ *
  * prod | dev
  */
 const ENV = 'dev'

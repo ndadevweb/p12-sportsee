@@ -118,4 +118,13 @@ export default class User {
       lipidCount: this.getLipid()+'g'
     }
   }
+
+  /**
+   * Check if user data exist
+   *
+   * @returns {Boolean}
+   */
+  hasData() {
+    return Object.keys(this.userData).length !== 0
+  }
 }

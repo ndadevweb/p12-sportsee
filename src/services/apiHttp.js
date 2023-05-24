@@ -16,11 +16,10 @@ export default class ApiHttp {
   /**
    * Return a promise with an User model
    *
-   * @param {Number} id ID of the user
+   * @param {Number} userId ID of the user
    * @returns {Promise}
    */
-  async getUser(id) {
-    const userId = parseInt(id, 10)
+  async getUser(userId) {
     const result = await this.axiosInstance.get(`/${ userId }`)
       .then(response => response)
       .catch(error => console.warn(error.message))
@@ -36,11 +35,10 @@ export default class ApiHttp {
   /**
    * Return a promise with an Activity model
    *
-   * @param {Number} id
+   * @param {Number} userId
    * @returns {Promise}
    */
-  async getUserActivity(id) {
-    const userId = parseInt(id, 10)
+  async getUserActivity(userId) {
     const result = await this.axiosInstance.get(`/${ userId }/activity`)
       .then(response => response)
       .catch(error => console.warn(error.message))
@@ -56,11 +54,10 @@ export default class ApiHttp {
   /**
    * Return a promise with an AverageSessions model
    *
-   * @param {Number} id
+   * @param {Number} userId
    * @returns {Promise}
    */
-  async getUserAverageSessions(id) {
-    const userId = parseInt(id, 10)
+  async getUserAverageSessions(userId) {
     const result = await this.axiosInstance.get(`/${ userId }/average-sessions`)
       .then(response => response)
       .catch(error => console.warn(error.message))
@@ -76,11 +73,10 @@ export default class ApiHttp {
   /**
    * Return a promise with a Performance model
    *
-   * @param {Number} id
+   * @param {Number} userId
    * @returns {Promise}
    */
-  async getUserPerformance(id) {
-    const userId = parseInt(id, 10)
+  async getUserPerformance(userId) {
     const result = await this.axiosInstance.get(`/${ userId }/performance`)
       .then(response => response)
       .catch(error => console.warn(error.message))

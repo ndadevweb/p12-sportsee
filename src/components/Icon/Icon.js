@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
  * @param {String} param.name Icon key
  * @throws Key does not exist
  *
- * @returns {React.ReactComponent}
+ * @returns <Icon />
  */
 export default function Icon({ name }) {
   const path = `/assets/icons/icon-${ name }.svg`

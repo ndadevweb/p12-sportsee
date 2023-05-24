@@ -6,7 +6,7 @@ import styles from './Hello.module.css'
  *
  * @param {Object} param
  * @param {String} param.firstname
- * @returns {React.ReactComponent}
+ * @returns <Hello />
  */
 export default function Hello({ firstname }) {
   return <p className={ styles.hello }>Bonjour <span className={ styles.firstname }>{ firstname }</span></p>

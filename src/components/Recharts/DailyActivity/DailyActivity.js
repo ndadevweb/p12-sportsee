@@ -7,7 +7,7 @@ import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, Responsive
  *
  * @param {Object} param
  * @param {Array<Object>} param.sessions
- * @returns {React.ReactComponentElement}
+ * @returns <DailyActivity />
  */
 export default function DailyActivity({ userActivity }) {
   return (

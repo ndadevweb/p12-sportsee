@@ -38,4 +38,13 @@ export default class Activity {
 
       return sessions
   }
+
+  /**
+   * Check activityData exist
+   *
+   * @returns {Boolean}
+   */
+  hasData() {
+    return Object.keys(this.activityData).length !== 0
+  }
 }

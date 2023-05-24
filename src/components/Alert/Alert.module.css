@@ -1,0 +1,8 @@
+.error {
+  width: max-content;
+  padding: 16px;
+  border-radius: 5px;
+  background: var(--color-red-custom-1);
+  color: var(--color-white);
+  font-weight: 500;
+}

@@ -7,7 +7,7 @@ import { Card } from '../../index'
  *
  * @param {Object} props
  * @param {Number} props.userScore The value must be between 0 and 100
- * @returns {ReactComponentElement}
+ * @returns <Score />
  */
 export default function Score({ userScore }) {
 
